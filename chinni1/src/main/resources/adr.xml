@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean id="adr" class="chinni1.address">
+    <property name="strt" value="sbicolony"></property>
+    <property name="city" value="mpl"></property>
+    <property name="state" value="AP"></property>
+    </bean>
+     <bean id="cst" class="chinni1.customer">
+     <property name="id" value="101"></property>
+    <property name="name" value="kusuma"></property>
+    <property name="email" value="kusuma@gmail.com"></property>
+    <property name="adr" ref="adr"></property>
+    </bean>
+    <bean id="adr1" class="chinni1.address">
+    <constructor-arg name="strt" value="ramarao street"></constructor-arg>
+    <constructor-arg name="city" value="kandur"></constructor-arg> 
+    <constructor-arg name="state" value="ap"></constructor-arg>
+    </bean>
+    <bean id="cst1" class="chinni1.customer">
+    <constructor-arg name="id" value="102"></constructor-arg>
+    <constructor-arg name="name" value="kumari"></constructor-arg> 
+    <constructor-arg name="email" value="kumari@gmail.com"></constructor-arg>
+    <property name="adr" ref="adr1"></property>
+    </bean>
+    
+</beans>
